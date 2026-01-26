@@ -1,0 +1,117 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px; /* balanced left/right padding */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+}
+
+/* MAIN CONTENT */
+.content {
+  padding: 0 80px; /* balanced left/right padding */
+}
+
+/* INTRO TEXT BLOCK - 800px tall, centered */
+.intro {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 800px;           /* fixed height */
+  text-align: center;      /* center text */
+}
+
+.intro h1 {
+  font-size: 28px;
+  line-height: 1.4;
+  max-width: 900px;
+}
+
+/* LARGE IMAGE */
+.image-large {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin-bottom: 60px;     /* half of previous 120px */
+}
+
+.image-large img {
+  width: 75%;              /* slightly smaller */
+  max-width: 1000px;
+  height: auto;            /* preserve aspect ratio */
+}
+
+/* IMAGE + TEXT */
+.image-text {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: flex-start;
+  gap: 60px;               /* horizontal spacing */
+  margin-bottom: 60px;     /* half of previous 120px */
+}
+
+.image-text img {
+  width: 50%;              /* smaller image */
+  height: auto;            /* preserve aspect ratio */
+}
+
+.image-text p {
+  width: 45%;               /* text beside image */
+  font-size: 21px;          /* 50% bigger */
+  line-height: 1.6;
+  text-align: left;
+  padding-right: 200px;      /* more padding to right */
+}
+
+/* IMAGE GRID */
+.image-grid {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 30px;
+  margin-bottom: 60px;     /* half of previous 120px */
+}
+
+.image-grid img:first-child {
+  width: auto;
+  max-width: 400px;        /* double previous size */
+  height: auto;            /* preserve aspect ratio */
+}
+
+.image-grid img:last-child {
+  width: auto;
+  max-width: 300px;        /* double previous size */
+  height: auto;            /* preserve aspect ratio */
+}
+
+/* FOOTER */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;      /* balanced left/right padding */
+  font-size: 18px;          /* same as header nav */
+  color: #FF4500;           /* reddish-orange */
+}
+
