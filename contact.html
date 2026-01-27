@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – HSSL Design & Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <img src="images/HSSL-Logo-blue.svg" alt="HSSL Logo"> 
+    <span>HSSL Design & Solutions</span>
+  </div>
+  
+  <nav class="nav">
+    <a href="index.html">Services</a>
+    <a href="experience.html">Experience</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="contact-section">
+      <div class="contact-text-side">
+        <h1>Reach out to us anytime, and we'll get back to you shortly!</h1>
+      </div>
+
+      <div class="contact-form-side">
+        <form action="#" method="POST">
+          
+          <div class="form-row">
+            <div class="form-group col-half">
+              <label for="first-name">Name<br>First Name (required)</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group col-half push-down">
+              <label for="last-name">Last Name (required)</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Sign up for news and updates</label>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject (required)</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (required)</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">SUBMIT</button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© HSSL Design & Solutions</span>
+    <span>Uppsala, Sweden</span>
+  </footer>
+
+</body>
+</html>
