@@ -10,9 +10,15 @@
 <body>
 
 <header class="site-header">
-  <div class="logo">
+  <a href="index.html" class="logo" style="text-decoration: none;">
     <img src="images/HSSL-Logo-blue.svg" alt="HSSL Logo"> 
     <span>HSSL Design & Solutions</span>
+  </a>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   
   <nav class="nav">
@@ -22,6 +28,14 @@
     <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
+
+<div style="display:none;">
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+</div>
 
   <main>
     <section class="contact-section">
@@ -74,6 +88,13 @@
     <span>© HSSL Design & Solutions</span>
     <span>Uppsala, Sweden</span>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>

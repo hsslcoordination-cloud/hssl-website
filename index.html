@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <title>HSSL Design & Solutions</title>
   
-  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Inter Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- SITE HEADER -->
-<header class="site-header">
-  <div class="logo">
+  <header class="site-header">
+  <a href="index.html" class="logo" style="text-decoration: none;">
     <img src="images/HSSL-Logo-blue.svg" alt="HSSL Logo"> 
     <span>HSSL Design & Solutions</span>
+  </a>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   
   <nav class="nav">
@@ -27,18 +30,16 @@
   </nav>
 </header>
 
-<head>
+<div style="display:none;">
   <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
-  </head>
+</div>
 
-  <!-- MAIN CONTENT -->
   <main class="content">
 
-    <!-- INTRO TEXT -->
     <section class="intro">
       <h1>
         We are an Uppsala based Architect company with genuine passion for 
@@ -46,12 +47,10 @@
       </h1>
     </section>
 
-    <!-- LARGE IMAGE -->
     <section class="image-large">
       <img src="images/img1.webp" alt="Waterfront architecture">
     </section>
 
-    <!-- IMAGE + TEXT -->
     <section class="image-text">
       <img src="images/img2.webp" alt="Interior architecture">
       <p>
@@ -61,7 +60,6 @@
       </p>
     </section>
 
-    <!-- IMAGE GRID -->
     <section class="image-grid">
       <img src="images/img3.webp" alt="Architecture model">
       <img src="images/img4.webp" alt="Spiral staircase">
@@ -69,11 +67,17 @@
 
   </main>
 
-  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <span>© HSSL Design & Solutions</span>
     <span>Uppsala, Sweden</span>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>

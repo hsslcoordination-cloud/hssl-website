@@ -11,45 +11,37 @@ body {
   color: #111;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-
-  /* NEW: These lines force the footer to the bottom */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 main {
-  /* This makes the main content expand to fill empty space */
   flex: 1;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  
-  /* Large padding, no max-width limit */
   padding: 40px 200px; 
   width: 100%;
 }
 
 .logo {
   display: flex;
-  align-items: center;  /* This centers them vertically relative to each other */
-  gap: 12px;            /* Space between logo and text */
-  
+  align-items: center;
+  gap: 12px;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.5px;
   color: #000;
-  
-  /* Optional: Ensures the text line-height doesn't create extra gaps */
   line-height: 1; 
 }
 
 .logo img {
-  height: 22px;  /* 22px visually matches 20px text perfectly */
+  height: 22px;
   width: auto;
   display: block;
 }
@@ -61,18 +53,17 @@ main {
   font-size: 18px;
 }
 
-/* MAIN CONTENT */
+/* --- HOME PAGE CONTENT --- */
 .content {
-  padding: 0 80px; /* balanced left/right padding */
+  padding: 0 80px; 
 }
 
-/* INTRO TEXT BLOCK - 800px tall, centered */
 .intro {
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
-  height: 800px;           /* fixed height */
-  text-align: center;      /* center text */
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  text-align: center;
 }
 
 .intro h1 {
@@ -81,92 +72,66 @@ main {
   max-width: 900px;
 }
 
-/* LARGE IMAGE */
 .image-large {
   display: flex;
-  justify-content: center; /* center horizontally */
-  margin-bottom: 60px;     /* half of previous 120px */
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .image-large img {
-  width: 75%;              /* slightly smaller */
+  width: 75%;
   max-width: 1000px;
-  height: auto;            /* preserve aspect ratio */
+  height: auto;
 }
 
-/* IMAGE + TEXT */
 .image-text {
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center;
   align-items: flex-start;
-  gap: 60px;               /* horizontal spacing */
-  margin-bottom: 60px;     /* half of previous 120px */
+  gap: 60px;
+  margin-bottom: 60px;
 }
 
 .image-text img {
   width: 40%;           
   height: auto;
-  margin-left: 300px;    /* <--- Moves the image 200px to the right */
+  margin-left: 300px;
 }
 
 .image-text p {
-  width: 45%;               /* text beside image */
-  font-size: 21px;          /* 50% bigger */
+  width: 45%;
+  font-size: 21px;
   line-height: 1.6;
   text-align: left;
-  padding-right: 200px;      /* more padding to right */
+  padding-right: 200px;
 }
 
 /* IMAGE GRID */
 .image-grid {
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center; 
+  align-items: center;     /* <--- THIS prevents the stretching */
   gap: 30px;
-  margin-bottom: 60px;     /* half of previous 120px */
+  margin-bottom: 60px;     
 }
 
 .image-grid img:first-child {
   width: auto;
-  max-width: 400px;        /* double previous size */
-  height: auto;            /* preserve aspect ratio */
+  max-width: 400px;        
+  height: auto;            
 }
 
 .image-grid img:last-child {
   width: auto;
-  max-width: 300px;        /* double previous size */
-  height: auto;            /* preserve aspect ratio */
+  max-width: 300px;        
+  height: auto;            
 }
 
-/* FOOTER */
-.site-footer {
-  display: flex;
-  justify-content: space-between;
-  
-  padding: 40px 200px;
-  width: 100%;
-  font-size: 15px;
-  color: #E07A5F; 
-}
-
-/* RESPONSIVE FIX */
-/* prevents the layout from breaking on smaller laptop screens */
-@media (max-width: 1400px) {
-  .site-header, .about-intro, .experience-intro, .experience-gallery, .site-footer {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-
-
-
-
-/* EXPERIENCE INTRO */
+/* --- EXPERIENCE PAGE --- */
 .experience-intro {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 120px;
-  
   padding: 100px 200px;
   align-items: start;
   width: 100%;
@@ -174,7 +139,7 @@ main {
 
 .experience-title h1 {
   font-size: 32px;
-  font-weight: bold; /* Changed to bold */
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -188,12 +153,10 @@ main {
   margin-bottom: 20px;
 }
 
-/* EXPERIENCE IMAGE GALLERY */
 .experience-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  
   padding: 0 200px 150px 200px;
   width: 100%;
 }
@@ -206,18 +169,11 @@ main {
   display: block;
 }
 
-
-
-
-
-/* --- ABOUT PAGE STYLES --- */
-
+/* --- ABOUT PAGE --- */
 .about-intro {
-  /* Use Flexbox instead of Grid to match the Header's layout logic */
   display: flex;
-  justify-content: space-between; /* Pushes Title to far left, Text to far right */
+  justify-content: space-between;
   align-items: flex-start;
-  
   padding: 100px 200px;
   width: 100%;
 }
@@ -229,35 +185,25 @@ main {
 }
 
 .about-text {
-  /* Sets the width to half the page, ensuring it sits on the right side */
   width: 50%; 
-  
-  /* Increased font size by 3px (15px -> 18px) */
   font-size: 18px; 
   line-height: 1.5;
   color: #333;
 }
 
 .about-text p {
-  margin-bottom: 24px; /* Increased spacing slightly for the larger text */
+  margin-bottom: 24px;
 }
 
-
-
-/* --- CONTACT PAGE STYLES --- */
-
-/* Reuse the flex layout structure from the About page for alignment */
+/* --- CONTACT PAGE --- */
 .contact-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  
-  /* Matches the padding of other pages */
   padding: 100px 200px;
   width: 100%;
 }
 
-/* Left side text area */
 .contact-text-side {
   width: 35%;
 }
@@ -269,17 +215,14 @@ main {
   max-width: 400px;
 }
 
-/* Right side form area */
 .contact-form-side {
-  width: 55%; /* Slightly wider than half to accommodate the form comfortably */
+  width: 55%;
 }
 
-/* FORM STYLING */
 .form-group {
   margin-bottom: 24px;
 }
 
-/* Labels */
 .form-group label {
   display: block;
   font-size: 14px;
@@ -287,25 +230,23 @@ main {
   margin-bottom: 8px;
 }
 
-/* Inputs and Textarea - Rounded style */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid #ccc;
-  border-radius: 30px; /* Creates the rounded pill shape */
+  border-radius: 30px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   outline: none;
 }
 
 .form-group textarea {
-  resize: vertical; /* Allows vertical resizing only */
-  border-radius: 20px; /* Slightly less rounded for the text box */
+  resize: vertical;
+  border-radius: 20px;
 }
 
-/* Two-column row for names */
 .form-row {
   display: flex;
   gap: 30px;
@@ -315,13 +256,10 @@ main {
   flex: 1;
 }
 
-/* Helper to align the Last Name label visually with First Name sub-label */
 .push-down label {
     margin-top: 28px;
 }
 
-
-/* Checkbox style */
 .checkbox-group {
   display: flex;
   align-items: center;
@@ -334,12 +272,11 @@ main {
 }
 
 .checkbox-group label {
-  margin-bottom: 0; /* Override default label margin */
+  margin-bottom: 0;
 }
 
-/* Submit Button */
 .submit-btn {
-  background-color: #E07A5F; /* The coral color used in footer */
+  background-color: #E07A5F;
   color: white;
   border: none;
   padding: 12px 36px;
@@ -348,34 +285,126 @@ main {
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: background-color 0.2s;
-  /* Note: The button in the image is rectangular, not rounded */
 }
 
 .submit-btn:hover {
-  background-color: #c7654b; /* Slightly darker on hover */
+  background-color: #c7654b;
 }
 
-/* Responsive adjustment for Contact page */
+/* --- FOOTER --- */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 200px;
+  width: 100%;
+  font-size: 15px;
+  color: #E07A5F; 
+}
+
+/* =========================================
+   MOBILE / RESPONSIVE STYLES
+   ========================================= */
+
+/* Hamburger Menu Icon (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 5px; /* Adds clickable area size */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s; /* Smooth transition for icon interaction if added later */
+}
+
+/* Tablet adjustment */
 @media (max-width: 1400px) {
-  .contact-section {
-    padding-left: 100px;
-    padding-right: 100px;
+  .site-header, .about-intro, .experience-intro, .experience-gallery, .site-footer, .contact-section {
+    padding-left: 50px;
+    padding-right: 50px;
   }
+  .content { padding: 0 50px; }
 }
 
-@media (max-width: 1024px) {
-    .contact-section {
-      flex-direction: column;
-      gap: 60px;
-    }
-    .contact-text-side, .contact-form-side {
-        width: 100%;
-    }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .push-down label {
-        margin-top: 0;
-    }
+/* MOBILE PHONES (Portrait) */
+@media (max-width: 768px) {
+  
+  /* --- HEADER ALIGNMENT FIX --- */
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;             /* Allows the nav to drop to the next line */
+    justify-content: space-between; /* Pushes Logo LEFT and Hamburger RIGHT */
+    align-items: center;
+    padding: 20px;               /* Matches the body padding exactly */
+  }
+
+  .hamburger {
+    display: flex; /* Show icon on mobile */
+  }
+
+  /* --- SMOOTH SLIDE ANIMATION --- */
+  .nav {
+    width: 100%;                 /* Forces it to take the full next line */
+    
+    /* Animation Start State (Closed) */
+    max-height: 0;               /* Height is 0 */
+    overflow: hidden;            /* Hides the links */
+    opacity: 0;                  /* Invisible */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    /* The Slide Effect */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.3s;
+    margin-top: 0;
+    border-top: 1px solid transparent; 
+  }
+
+  /* Animation End State (Open) */
+  .nav.active {
+    max-height: 500px;           /* Expands to fit content */
+    opacity: 1;                  /* Becomes visible */
+    margin-top: 20px;            /* Adds space between logo and links */
+    border-top: 1px solid #eee;  /* Adds the separator line */
+    padding-top: 20px;
+  }
+
+  /* --- REST OF MOBILE STYLES (Keep existing stacking logic) --- */
+  .about-intro, .experience-intro, .experience-gallery, .site-footer, .contact-section {
+    padding: 20px;               /* Matches Header padding */
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .content { padding: 20px; }
+
+  /* Stack Images & Text */
+  .intro { height: auto; padding: 60px 0; }
+  .intro h1 { font-size: 28px; }
+  .image-large img { width: 100%; }
+
+  .image-text { flex-direction: column; gap: 30px; }
+  .image-text img, .image-text p { width: 100%; margin: 0; padding: 0; }
+
+  .image-grid { flex-direction: column; align-items: center; }
+  .image-grid img:first-child, .image-grid img:last-child { max-width: 100%; width: 100%; }
+
+  /* Experience Stacking */
+  .experience-intro { display: flex; flex-direction: column; gap: 30px; }
+  .experience-gallery { grid-template-columns: 1fr; gap: 40px; padding-bottom: 80px; }
+
+  /* About & Contact Stacking */
+  .about-text, .contact-text-side, .contact-form-side { width: 100%; }
+  .form-row { flex-direction: column; gap: 0; }
+  .push-down label { margin-top: 0; }
+  
+  /* Footer Stacking */
+  .site-footer { flex-direction: column; gap: 10px; align-items: center; text-align: center; }
 }

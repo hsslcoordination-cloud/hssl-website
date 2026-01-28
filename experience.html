@@ -9,11 +9,16 @@
 </head>
 <body>
 
-  <!-- HEADER (same as homepage) -->
-<header class="site-header">
-  <div class="logo">
+  <header class="site-header">
+  <a href="index.html" class="logo" style="text-decoration: none;">
     <img src="images/HSSL-Logo-blue.svg" alt="HSSL Logo"> 
     <span>HSSL Design & Solutions</span>
+  </a>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   
   <nav class="nav">
@@ -24,15 +29,14 @@
   </nav>
 </header>
 
-<head>
+<div style="display:none;">
   <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
-</head>
+</div>
 
-  <!-- INTRO SECTION -->
   <section class="experience-intro">
 
     <div class="experience-title">
@@ -62,32 +66,32 @@
 
   </section>
 
-  <!-- IMAGE GRID -->
   <section class="experience-gallery">
-
     <img src="images/exp1.webp">
     <img src="images/exp2.webp">
     <img src="images/exp3.webp">
-
     <img src="images/exp4.webp">
     <img src="images/exp5.webp">
     <img src="images/exp6.webp">
-
     <img src="images/exp7.webp">
     <img src="images/exp8.webp">
     <img src="images/exp9.webp">
-
     <img src="images/exp10.webp">
     <img src="images/exp11.webp">
     <img src="images/exp12.webp">
-
   </section>
 
-  <!-- FOOTER (same as homepage) -->
   <footer class="site-footer">
     <span>© HSSL Design & Solutions</span>
     <span>Uppsala, Sweden</span>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
