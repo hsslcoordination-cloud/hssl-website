@@ -53,7 +53,7 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -50px;          /* Moves it exactly 50px below the header */
+  bottom: -60px;          /* Moves it exactly 50px below the header */
   width: 100%;
   height: 50px;           /* The height of the fade */
   
@@ -359,6 +359,131 @@ main {
   width: 100%;
   font-size: 15px;
   color: #E07A5F; 
+}
+
+/* =========================================
+   SERVICES PAGE STYLES
+   ========================================= */
+
+.services-container {
+  padding: 100px 200px; /* Matches your other pages */
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 80px;            /* Large gap for breathing room */
+  margin-bottom: 150px; /* Spacing between sections */
+}
+
+/* IMAGE STYLING */
+.service-img {
+  flex: 1;
+  /* Ensures images don't exceed your requested dimensions */
+  max-width: 635px; 
+}
+
+.service-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Optional: Adds a subtle shadow to match the clean aesthetic */
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.05); */
+}
+
+/* TEXT STYLING */
+.service-text {
+  flex: 1;
+  max-width: 500px; /* Keeps text lines from getting too long/hard to read */
+}
+
+.service-text h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  font-weight: 500; /* Slightly lighter bold to match reference */
+  line-height: 1.2;
+}
+
+.service-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --- NEW STYLES FOR GREY SECTION --- */
+
+/* This creates the full-width grey band */
+.full-width-grey {
+  background-color: #F5F5F5; /* Light grey */
+  width: 100%;
+  
+  /* Centers the inner container */
+  display: flex;
+  justify-content: center;
+  
+  /* Adds vertical spacing inside the grey box */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  
+  /* Ensures the grey box touches the section above/below with correct gaps */
+  margin-top: 100px; 
+  margin-bottom: 100px;
+}
+
+/* Helper to remove default container padding so alignment stays perfect */
+.services-container.clean {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Helper to remove the bottom margin from the row inside the grey box */
+.service-row.no-margin {
+  margin-bottom: 0;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Tablet (Standard Laptops) */
+@media (max-width: 1400px) {
+  .services-container {
+    padding: 100px 100px;
+  }
+  .service-row {
+    gap: 50px;
+  }
+}
+
+/* Mobile (Phones) */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 40px 20px;
+  }
+
+  .service-row {
+    flex-direction: column;
+    margin-bottom: 80px;
+    gap: 30px;
+  }
+
+  /* MAGIC TRICK: This forces images to ALWAYS be on top of text on mobile,
+     even if they are on the right/bottom in the desktop HTML code. */
+  .service-img {
+    order: 1; 
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .service-text {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* =========================================
