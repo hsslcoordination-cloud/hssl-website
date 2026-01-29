@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects – HSSL Design & Solutions</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" style="text-decoration: none;">
+      <img src="images/HSSL-Logo-orange.svg" alt="HSSL Logo"> 
+      <span>HSSL Design & Solutions</span>
+    </a>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav">
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a> <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="experience-intro">
+
+    <div class="experience-title">
+      <h1>Expertise<br>& Projects</h1>
+    </div>
+
+    <div class="experience-text">
+      <p>
+        We are an Uppsala based Architect startup with genuine passion for quality
+        and customer-oriented solutions. Our services center on architectural
+        design, including conceptual and technical drawings, 3D modeling,
+        visualization, prototyping, and packaging-related design support.
+      </p>
+
+      <p>
+        Our company focuses on providing services with great flexibility,
+        affordability, and short lead times. We also have experience across both
+        mechanical and electrical engineering disciplines.
+      </p>
+
+      <p>
+        As a start-up we look forward for collaborative exploration and deliver
+        well designed, practical outcomes ensuring social and environmental
+        sustainability.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="experience-gallery">
+    <img src="images/exp1.webp" alt="Project Image 1">
+    <img src="images/exp2.webp" alt="Project Image 2">
+    <img src="images/exp3.webp" alt="Project Image 3">
+    <img src="images/exp4.webp" alt="Project Image 4">
+    <img src="images/exp5.webp" alt="Project Image 5">
+    <img src="images/exp6.webp" alt="Project Image 6">
+    <img src="images/exp7.webp" alt="Project Image 7">
+    <img src="images/exp8.webp" alt="Project Image 8">
+    <img src="images/exp9.webp" alt="Project Image 9">
+    <img src="images/exp10.webp" alt="Project Image 10">
+    <img src="images/exp11.webp" alt="Project Image 11">
+    <img src="images/exp12.webp" alt="Project Image 12">
+  </section>
+
+  <footer class="site-footer">
+    <span>© HSSL Design & Solutions</span>
+    <span>Uppsala, Sweden</span>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

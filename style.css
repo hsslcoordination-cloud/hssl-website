@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================================
+   RESET & GLOBAL STYLES
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +22,9 @@ main {
   flex: 1;
 }
 
-/* --- HEADER --- */
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -28,55 +32,38 @@ main {
   padding: 40px 200px; 
   width: 100%;
   
-  /* NEW: Required for the gradient to position correctly */
+  /* Required for the gradient to position correctly */
   position: relative; 
-  background-color: #fff; /* Ensures header background stays solid white */
-  z-index: 100;           /* Forces header to sit ON TOP of images/content */
+  background-color: #fff; 
+  z-index: 100;           
 }
 
-/* --- HEADER --- */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 40px 200px; 
-  width: 100%;
-  
-  /* NEW: Required for the gradient to position correctly */
-  position: relative; 
-  background-color: #fff; /* Ensures header background stays solid white */
-  z-index: 100;           /* Forces header to sit ON TOP of images/content */
-}
-
-/* NEW: This creates the 50px gradient strip hanging below the header */
+/* 50px Gradient Strip below header */
 .site-header::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -60px;          /* Moves it exactly 50px below the header */
+  bottom: -50px;         
   width: 100%;
-  height: 50px;           /* The height of the fade */
-  
-  /* The Gradient: Fades from light grey (15% black) to transparent */
+  height: 50px;          
   background: linear-gradient(to bottom, rgba(0,0,0,0.15), transparent);
-  
-  pointer-events: none;   /* Allows you to click objects underneath the gradient */
+  pointer-events: none;   
 }
 
 .logo {
   display: flex;
   align-items: center;
-
-  gap: 16px;            
+  gap: 12px;             /* Reduced gap for smaller logo */
+  
   font-weight: 600;
-  font-size: 40px;      
-  letter-spacing: -1px; 
+  font-size: 22px;       /* UPDATED: Set exactly to 22px */
+  letter-spacing: -0.5px; 
   color: #000;
-  line-height: 0.8;    
+  line-height: 1;    
 }
 
 .logo img {
-  height: 40px;        
+  height: 28px;          /* UPDATED: Reduced to match text size */
   width: auto;
   display: block;
 }
@@ -88,32 +75,17 @@ main {
   font-size: 18px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 16px;            
-  
-  font-weight: 600;
-  font-size: 22px;      
-  letter-spacing: -1px; 
-  color: #000;
-  line-height: 0.8;    
+/* Active Link Underline */
+.nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;       
+  text-decoration-thickness: 1.5px; 
+  color: #000;                      
 }
 
-.logo img {
-  height: 32px;        
-  width: auto;
-  display: block;
-}
-
-.nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #111;
-  font-size: 18px;
-}
-
-/* --- HOME PAGE CONTENT --- */
+/* =========================================
+   HOME PAGE STYLES
+   ========================================= */
 .content {
   padding: 0 80px; 
 }
@@ -166,11 +138,11 @@ main {
   padding-right: 200px;
 }
 
-/* IMAGE GRID */
+/* Image Grid (Home) */
 .image-grid {
   display: flex;
   justify-content: center; 
-  align-items: center;     /* <--- THIS prevents the stretching */
+  align-items: center;     
   gap: 30px;
   margin-bottom: 60px;     
 }
@@ -187,7 +159,9 @@ main {
   height: auto;            
 }
 
-/* --- EXPERIENCE PAGE --- */
+/* =========================================
+   PROJECTS (EXPERIENCE) PAGE
+   ========================================= */
 .experience-intro {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -229,7 +203,9 @@ main {
   display: block;
 }
 
-/* --- ABOUT PAGE --- */
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
 .about-intro {
   display: flex;
   justify-content: space-between;
@@ -255,7 +231,9 @@ main {
   margin-bottom: 24px;
 }
 
-/* --- CONTACT PAGE --- */
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
 .contact-section {
   display: flex;
   justify-content: space-between;
@@ -351,7 +329,9 @@ main {
   background-color: #c7654b;
 }
 
-/* --- FOOTER --- */
+/* =========================================
+   FOOTER
+   ========================================= */
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -364,9 +344,8 @@ main {
 /* =========================================
    SERVICES PAGE STYLES
    ========================================= */
-
 .services-container {
-  padding: 100px 200px; /* Matches your other pages */
+  padding: 100px 200px; 
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -376,14 +355,13 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  gap: 80px;            /* Large gap for breathing room */
-  margin-bottom: 150px; /* Spacing between sections */
+  gap: 80px;            
+  margin-bottom: 150px; 
 }
 
-/* IMAGE STYLING */
+/* Service Images */
 .service-img {
   flex: 1;
-  /* Ensures images don't exceed your requested dimensions */
   max-width: 635px; 
 }
 
@@ -392,20 +370,18 @@ main {
   height: auto;
   display: block;
   object-fit: cover;
-  /* Optional: Adds a subtle shadow to match the clean aesthetic */
-  /* box-shadow: 0 10px 30px rgba(0,0,0,0.05); */
 }
 
-/* TEXT STYLING */
+/* Service Text */
 .service-text {
   flex: 1;
-  max-width: 500px; /* Keeps text lines from getting too long/hard to read */
+  max-width: 500px; 
 }
 
 .service-text h2 {
   font-size: 32px;
   margin-bottom: 24px;
-  font-weight: 500; /* Slightly lighter bold to match reference */
+  font-weight: 500; 
   line-height: 1.2;
 }
 
@@ -415,79 +391,30 @@ main {
   color: #333;
 }
 
-/* --- NEW STYLES FOR GREY SECTION --- */
-
-/* This creates the full-width grey band */
+/* Grey Section (Services) */
 .full-width-grey {
-  background-color: #F5F5F5; /* Light grey */
+  background-color: #F5F5F5; 
   width: 100%;
-  
-  /* Centers the inner container */
   display: flex;
   justify-content: center;
-  
-  /* Adds vertical spacing inside the grey box */
   padding-top: 80px;
   padding-bottom: 80px;
-  
-  /* Ensures the grey box touches the section above/below with correct gaps */
   margin-top: 100px; 
   margin-bottom: 100px;
 }
 
-/* Helper to remove default container padding so alignment stays perfect */
 .services-container.clean {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* Helper to remove the bottom margin from the row inside the grey box */
 .service-row.no-margin {
   margin-bottom: 0;
 }
 
-/* --- RESPONSIVE ADJUSTMENTS --- */
-
-/* Tablet (Standard Laptops) */
-@media (max-width: 1400px) {
-  .services-container {
-    padding: 100px 100px;
-  }
-  .service-row {
-    gap: 50px;
-  }
-}
-
-/* Mobile (Phones) */
-@media (max-width: 768px) {
-  .services-container {
-    padding: 40px 20px;
-  }
-
-  .service-row {
-    flex-direction: column;
-    margin-bottom: 80px;
-    gap: 30px;
-  }
-
-  /* MAGIC TRICK: This forces images to ALWAYS be on top of text on mobile,
-     even if they are on the right/bottom in the desktop HTML code. */
-  .service-img {
-    order: 1; 
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .service-text {
-    order: 2;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 /* =========================================
-   MOBILE / RESPONSIVE STYLES
+   MOBILE / RESPONSIVE STYLES (FIXED)
    ========================================= */
 
 /* Hamburger Menu Icon (Hidden on Desktop) */
@@ -496,7 +423,7 @@ main {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  padding: 5px; /* Adds clickable area size */
+  padding: 5px; 
 }
 
 .hamburger span {
@@ -504,7 +431,7 @@ main {
   height: 3px;
   background-color: #000;
   border-radius: 2px;
-  transition: all 0.3s; /* Smooth transition for icon interaction if added later */
+  transition: all 0.3s;
 }
 
 /* Tablet adjustment */
@@ -514,82 +441,163 @@ main {
     padding-right: 50px;
   }
   .content { padding: 0 50px; }
+  .intro h1 { max-width: 100%; }
+  
+  .services-container { padding: 100px 100px; }
+  .service-row { gap: 50px; }
 }
 
 /* MOBILE PHONES (Portrait) */
 @media (max-width: 768px) {
   
-  /* --- HEADER ALIGNMENT FIX --- */
+  /* --- 1. HEADER FIX --- */
   .site-header {
     display: flex;
-    flex-wrap: wrap;             /* Allows the nav to drop to the next line */
-    justify-content: space-between; /* Pushes Logo LEFT and Hamburger RIGHT */
+    flex-wrap: wrap;             /* Allows the hidden Nav to drop down */
+    justify-content: space-between; 
     align-items: center;
-    padding: 20px;               /* Matches the body padding exactly */
+    padding: 20px !important;    /* Forces small padding */
   }
 
+  /* Fixes logo size and positioning on mobile */
+  .logo {
+    max-width: 75%;
+    font-size: 20px;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 26px; /* Slightly smaller for mobile */
+  }
+
+  /* Pushes hamburger to the far right */
   .hamburger {
-    display: flex; /* Show icon on mobile */
+    display: flex; 
+    margin-left: auto;           
   }
 
-  /* --- SMOOTH SLIDE ANIMATION --- */
+  /* --- NAV ANIMATION --- */
   .nav {
-    width: 100%;                 /* Forces it to take the full next line */
-    
-    /* Animation Start State (Closed) */
-    max-height: 0;               /* Height is 0 */
-    overflow: hidden;            /* Hides the links */
-    opacity: 0;                  /* Invisible */
-    
+    width: 100%; 
+    max-height: 0; 
+    overflow: hidden; 
+    opacity: 0; 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
-    /* The Slide Effect */
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.3s;
     margin-top: 0;
     border-top: 1px solid transparent; 
   }
 
-  /* Animation End State (Open) */
   .nav.active {
-    max-height: 500px;           /* Expands to fit content */
-    opacity: 1;                  /* Becomes visible */
-    margin-top: 20px;            /* Adds space between logo and links */
-    border-top: 1px solid #eee;  /* Adds the separator line */
+    max-height: 500px; 
+    opacity: 1; 
+    margin-top: 20px; 
+    border-top: 1px solid #eee; 
     padding-top: 20px;
   }
 
-  /* --- REST OF MOBILE STYLES (Keep existing stacking logic) --- */
-  .about-intro, .experience-intro, .experience-gallery, .site-footer, .contact-section {
-    padding: 20px;               /* Matches Header padding */
+  /* --- 2. HOME PAGE FIX --- */
+  .content { 
+    padding: 20px !important; 
+  }
+
+  .intro { 
+    height: auto !important; 
+    padding: 60px 0 !important; 
     flex-direction: column;
-    gap: 30px;
   }
   
-  .content { padding: 20px; }
-
-  /* Stack Images & Text */
-  .intro { height: auto; padding: 60px 0; }
-  .intro h1 { font-size: 28px; }
-  .image-large img { width: 100%; }
-
-  .image-text { flex-direction: column; gap: 30px; }
-  .image-text img, .image-text p { width: 100%; margin: 0; padding: 0; }
-
-  .image-grid { flex-direction: column; align-items: center; }
-  .image-grid img:first-child, .image-grid img:last-child { max-width: 100%; width: 100%; }
-
-  /* Experience Stacking */
-  .experience-intro { display: flex; flex-direction: column; gap: 30px; }
-  .experience-gallery { grid-template-columns: 1fr; gap: 40px; padding-bottom: 80px; }
-
-  /* About & Contact Stacking */
-  .about-text, .contact-text-side, .contact-form-side { width: 100%; }
-  .form-row { flex-direction: column; gap: 0; }
-  .push-down label { margin-top: 0; }
+  .intro h1 { 
+    font-size: 28px !important; 
+    text-align: left;
+  }
   
-  /* Footer Stacking */
-  .site-footer { flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+  .image-large img { 
+    width: 100% !important; 
+  }
+
+  /* Force stack: Image top, Text bottom */
+  .image-text { 
+    display: flex !important;
+    flex-direction: column !important; 
+    gap: 30px !important; 
+    margin-bottom: 40px !important;
+  }
+  
+  .image-text img { 
+    width: 100% !important; 
+    margin-left: 0 !important; 
+  }
+  
+  .image-text p { 
+    width: 100% !important; 
+    padding-right: 0 !important; 
+  }
+
+  .image-grid { 
+    flex-direction: column !important; 
+    align-items: center !important; 
+  }
+  
+  .image-grid img:first-child, 
+  .image-grid img:last-child { 
+    max-width: 100% !important; 
+    width: 100% !important; 
+  }
+
+  /* --- 3. PROJECTS / EXPERIENCE PAGE FIX --- */
+  .experience-intro { 
+    display: flex !important;
+    flex-direction: column !important; 
+    gap: 30px !important; 
+    padding: 40px 20px !important;
+  }
+  
+  .experience-gallery { 
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1 Column only */
+    gap: 20px !important; 
+    padding: 0 20px 80px 20px !important; 
+  }
+
+  /* --- 4. ABOUT & CONTACT FIX --- */
+  .about-intro, .contact-section { 
+    flex-direction: column !important;
+    padding: 40px 20px !important;
+  }
+  
+  .about-text, .contact-text-side, .contact-form-side { 
+    width: 100% !important; 
+  }
+  
+  .form-row { 
+    flex-direction: column !important; 
+    gap: 0 !important; 
+  }
+  
+  /* --- 5. SERVICES PAGE FIX --- */
+  .services-container {
+    padding: 40px 20px !important;
+  }
+
+  .service-row {
+    flex-direction: column !important;
+    margin-bottom: 60px !important;
+    gap: 30px !important;
+  }
+  
+  .service-img { order: 1; width: 100% !important; }
+  .service-text { order: 2; width: 100% !important; }
+  
+  /* --- 6. FOOTER FIX --- */
+  .site-footer { 
+    flex-direction: column !important; 
+    gap: 15px; 
+    align-items: center; 
+    text-align: center; 
+    padding: 40px 20px !important;
+  }
 }
