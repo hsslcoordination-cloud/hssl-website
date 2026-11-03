@@ -1,86 +1,449 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="images/favicon/site.webmanifest" />
   <title>HSSL Design & Solutions</title>
-  
-  <link rel="stylesheet" href="style.css">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
- <link rel="icon" type="image/svg+xml" href="images/favicon-96x96.png" />
-
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header class="site-header">
-  <a href="index.html" class="logo" style="text-decoration: none;">
-    <img src="images/HSSL-Logo-orange.svg" alt="HSSL Logotyp"> 
-    <span>HSSL Design & Solutions</span>
-  </a>
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="HSSL Design & Solutions" class="site-logo" />
+      </a>
 
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  
-  <nav class="nav">
-  <a href="services.html">Tjänster</a>
-  <a href="projects.html">Projekt</a>
-  <a href="about.html">Om oss</a>
-  <a href="contact.html">Kontakt</a>
-</nav>
-</header>
+      <!-- Classic 3-Bar Hamburger Button (Mobile) -->
+      <button class="hamburger-btn" aria-label="Toggle navigation" onclick="document.querySelector('.navbar').classList.toggle('nav-open')">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<div style="display:none;">
-  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <link rel="manifest" href="images/site.webmanifest" />
-</div>
+      <!-- Navigation Content (Desktop & Mobile Dropdown) -->
+      <div class="nav-content">
+        <nav class="nav-links">
+          <!-- Dropdown Wrapper for Tjänster -->
+          <div class="nav-dropdown" id="tjansterDropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" onclick="this.parentElement.classList.toggle('active')">
+              <span>Kompetenser</span>
+              <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
 
-  <main class="content">
+            <!-- Services Dropdown Box -->
+            <div class="nav-dropdown-menu">
+              <a href="1.1-kompetens-teknisk-ritning-3D-modellering.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span>Teknisk ritning & 3D Modellering</span>
+              </a>
 
-    <section class="intro">
-      <h1>
-        Vi är ett Uppsalabaserat arkitektföretag med en genuin passion för 
-        kvalitet och kundorienterade lösningar.
-      </h1>
-    </section>
+              <a href="1.2-kompetens-framtagning-av-forvaringslosningar.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="14" rx="2"></rect>
+                  <path d="M2 12h20"></path>
+                  <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+                  <line x1="8" y1="12" x2="8" y2="15"></line>
+                  <line x1="16" y1="12" x2="16" y2="15"></line>
+                </svg>
+                <span>Framtagning av förvaringslösningar</span>
+              </a>
 
-    <section class="image-large">
-      <img src="images/img1.webp" alt="Arkitektur vid vattnet">
-    </section>
+              <a href="1.3-kompetens-specialverktygs-framtagning.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+                <span>Specialverktygs-framtagning efter kundbehov</span>
+              </a>
 
-    <section class="image-text">
-      <img src="images/img2.webp" alt="Inredningsarkitektur">
-      <p>
-        Som ett nystartat företag ser vi fram emot att utforska samarbeten och leverera
-        väldesignade, praktiska resultat som säkerställer social och miljömässig
-        hållbarhet.
-      </p>
-    </section>
+              <a href="1.4-kompetens-plast-och-metallbearbetning.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                <span>Plast- och Metallbearbetning</span>
+              </a>
 
-    <section class="image-grid">
-      <img src="images/img3.webp" alt="Arkitektmodell">
-      <img src="images/img4.webp" alt="Spiraltrappa">
-    </section>
+              <a href="1.5-kompetens-skraddarsydda-skuminsatser.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+                <span>Skräddarsydda skuminsatser</span>
+              </a>
 
-  </main>
+              <a href="1.6-kompetens-3d-utskrifter-prototyper.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h12v4H6z"></path>
+                  <path d="M8 7v4l4 4 4-4V7"></path>
+                  <line x1="12" y1="15" x2="12" y2="18"></line>
+                  <circle cx="12" cy="21" r="1"></circle>
+                </svg>
+                <span>3D-utskrifter & Prototyper</span>
+              </a>
+            </div>
+          </div>
 
-  <footer class="site-footer">
-    <span>© HSSL Design & Solutions</span>
-    <span>Uppsala, Sverige</span>
+          <div class="nav-dropdown" id="applikationerDropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" onclick="this.parentElement.classList.toggle('active')">
+              <span>Applikationer</span>
+              <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="2.1-applikationer-elnat-transformatorer.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span>Elnät & Transformatorer</span>
+              </a>
+            </div>
+          </div>
+          <div class="nav-dropdown" id="omOssDropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" onclick="this.parentElement.classList.toggle('active')">
+              <span>Om oss</span>
+              <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="3.1-om-oss.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Om oss</span>
+              </a>
+
+              <a href="3.2-hallbarhet.html" class="dropdown-item">
+                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 4 13c0-4 2.5-6 2.5-10 3 1 5.5 3 5.5 7 2-1.5 2.5-4 2.5-4 2 3 3.5 6 3.5 8a7 7 0 0 1-7 7z"></path>
+                </svg>
+                <span>Hållbarhet</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-buttons">
+          <a href="4.1-offert.html" class="btn btn-offert-transparency">Offert</a>
+          <a href="5.1-kontakt.html" class="btn btn-primary">Kontakta oss</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Din utrustning.<br>Din förvaring.<br>Exakt som du vill ha den.</h1>
+      <p>Optimera ditt arbetsflöde och dina produkter med våra specialanpassade lösningar.</p>
+      <a href="#offert" class="btn btn-accent hero-cta">Få en offert idag</a>
+
+      <div class="hero-cards">
+        <a href="1.1-kompetens-teknisk-ritning-3D-modellering.html" class="hero-card" style="text-decoration: none; color: inherit;">
+          <svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          <span>Teknisk ritning &<br>3D Modellering</span>
+        </a>
+
+        <a href="1.2-kompetens-framtagning-av-forvaringslosningar.html" class="hero-card" style="text-decoration: none; color: inherit;">
+          <svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="14" rx="2"></rect>
+            <path d="M2 12h20"></path>
+            <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+            <line x1="8" y1="12" x2="8" y2="15"></line>
+            <line x1="16" y1="12" x2="16" y2="15"></line>
+          </svg>
+          <span>Framtagning av<br>förvaringslösningar</span>
+        </a>
+
+        <a href="1.3-kompetens-specialverktygs-framtagning.html" class="hero-card" style="text-decoration: none; color: inherit;">
+<svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+          <span>Specialverktygs-framtagning<br>efter kundbehov</span>
+        </a>
+
+        <a href="1.4-kompetens-plast-och-metallbearbetning.html" class="hero-card" style="text-decoration: none; color: inherit;">
+<svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Plast- och<br>Metallbearbetning</span>
+        </a>
+
+        <a href="1.5-kompetens-skraddarsydda-skuminsatser.html" class="hero-card" style="text-decoration: none; color: inherit;">
+<svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="3" y1="15" x2="21" y2="15"></line>
+            <line x1="9" y1="3" x2="9" y2="21"></line>
+            <line x1="15" y1="3" x2="15" y2="21"></line>
+          </svg>
+          <span>Skräddarsydda<br>skuminsatser</span>
+        </a>
+
+        <a href="1.6-kompetens-3d-utskrifter-prototyper.html" class="hero-card" style="text-decoration: none; color: inherit;">
+<svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3h12v4H6z"></path>
+            <path d="M8 7v4l4 4 4-4V7"></path>
+            <line x1="12" y1="15" x2="12" y2="18"></line>
+            <circle cx="12" cy="21" r="1"></circle>
+          </svg>
+          <span>3D-utskrifter<br>& Prototyper</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Total Provider -->
+  <section class="section provider-section">
+    <div class="container text-center">
+      <h2>Din helhetsleverantör för förvaring & produktutveckling</h2>
+      <p class="subtitle">Vi tar hand om hela kedjan – från koncept och CAD-ritning till prototyptillverkning och färdig förvaringslösning.</p>
+      
+      <div class="process-grid">
+        <div class="process-item">
+          <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.99 6.74 1.93 3.44"></path><path d="M19.136 12a10 10 0 0 1-14.271 0"></path><path d="m21 21-2.16-3.84"></path><path d="m3 21 8.02-14.26"></path><circle cx="12" cy="5" r="2"></circle></svg></div>
+          <h3>Design & Planering</h3>
+          <p>CAD-design, 3D-modellering och materialval</p>
+        </div>
+        <div class="process-item">
+          <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"></rect><path d="M2 12h20"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><line x1="8" y1="12" x2="8" y2="15"></line><line x1="16" y1="12" x2="16" y2="15"></line></svg></div>
+          <h3>Framtagning Förvaring & Specialverktyg</h3>
+          <p>Tillverkning av unika verktyg och formar</p>
+        </div>
+        <div class="process-item">
+          <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v4H6z"></path><path d="M8 7v4l4 4 4-4V7"></path><line x1="12" y1="15" x2="12" y2="18"></line><circle cx="12" cy="21" r="1"></circle></svg></div>
+          <h3>Prototyptillverkning</h3>
+          <p>Tillverkning av unika verktyg och formar</p>
+        </div>
+        <div class="process-item">
+          <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+          <h3>Färdig Lösning</h3>
+          <p>Tillverkning av unika verktyg och formar</p>
+        </div>
+        <div class="process-item">
+          <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg></div>
+          <h3>Emballage & Frakt</h3>
+          <p>Montering, säker packning och direktleverans</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-text">
+          <h3>Design & Tillverkning</h3>
+          <p>Vi hjälper dig från koncept till färdig design med avancerad CAD-modellering och DFM-analys. Vi optimerar produktutformning och materialval för att möta dina krav på funktion, kostnad och kvalitet. Tidiga insatser minskar ledtider och säkrar en smidig tillverkning.</p>
+        </div>
+        <div class="feature-image">
+          <img src="images/home-page-1.2.jpg" alt="Verktyg och skuminsats">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Services Grid -->
+  <section id="tjanster" class="section bg-gray">
+    <div class="container text-center">
+      <h2>Våra tjänster & kompetenser</h2>
+      <p class="subtitle">Optimera ditt arbetsflöde och dina produkter med våra specialanpassade lösningar</p>
+
+      <div class="grid-3">
+        <a href="1.1-kompetens-teknisk-ritning-3D-modellering.html" class="card card-white" style="text-decoration: none;">
+          <h3>Teknisk ritning &<br>3D Modellering</h3>
+        </a>
+        <a href="1.2-kompetens-framtagning-av-forvaringslosningar.html" class="card card-white" style="text-decoration: none;">
+          <h3>Marknadssourcing &<br>framtagning av<br>förvaringslösningar</h3>
+        </a>
+        <a href="1.3-kompetens-specialverktygs-framtagning.html" class="card card-white" style="text-decoration: none;">
+          <h3>Specialverktygs-framtagning<br>efter kundbehov</h3>
+        </a>
+        <a href="1.4-kompetens-plast-och-metallbearbetning.html" class="card card-white" style="text-decoration: none;">
+          <h3>Plast- och<br>Metallbearbetning</h3>
+        </a>
+        <a href="1.5-kompetens-skraddarsydda-skuminsatser.html" class="card card-white" style="text-decoration: none;">
+          <h3>Skräddarsydda<br>skuminsatser</h3>
+        </a>
+        <a href="1.6-kompetens-3d-utskrifter-prototyper.html" class="card card-white" style="text-decoration: none;">
+          <h3>3D-utskrifter<br>& Prototyper</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Why Choose Us -->
+  <section id="om-oss" class="section">
+    <div class="container text-center">
+      <h2>Varför välja oss</h2>
+      <p class="subtitle">Med personlig service och snabb hantering tar vi din idé från CAD-skiss till färdig lösning utan dröjsmål.</p>
+
+      <div class="grid-3 gap-large">
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
+          <h3>Helhetsansvar</h3>
+          <p>Från första skiss och CAD-modell till färdig levererad produkt.</p>
+        </div>
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><path d="M8.12 8.12 12 12"></path><path d="M20 4 8.12 15.88"></path><circle cx="6" cy="18" r="3"></circle><path d="M14.8 14.8 20 20"></path></svg></div>
+          <h3>Skräddarsytt efter behov</h3>
+          <p>Alla skuminsatser och komponenter anpassas exakt efter dina verktyg och önskemål.</p>
+        </div>
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="15" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg></div>
+          <h3>Snabb prototyptillverkning</h3>
+          <p>Från idé till färdigutskuren förvaringslösning utan långa ledtider.</p>
+        </div>
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></div>
+          <h3>Starkt nätverk</h3>
+          <p>Vi koordinerar inköp och samkör med experter inom plast- och metallbearbetning.</p>
+        </div>
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg></div>
+          <h3>Hög precision</h3>
+          <p>Tekniska ritningar och exakta mått garanterar perfekt passform.</p>
+        </div>
+        <div class="icon-block">
+          <div class="round-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3>Personlig service</h3>
+          <p>Tätt samarbete och engagerad projektledning från start till mål.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Contact Form -->
+  <section id="offert" class="section start-project-section">
+    <div class="container">
+      <div class="start-project-grid">
+        <div>
+          <h2>Redo att starta ditt projekt?</h2>
+          <p class="start-project-desc">Få en kostnadsfri konsultation och offert. Vi tar din idé från koncept till färdig lösning.</p>
+          <ul class="check-list">
+            <li>Kostnadsfri designkonsultation</li>
+            <li>Svar inom 12 timmar</li>
+            <li>Certifierad precisionstillverkning</li>
+            <li>Snabba ledtider på prototyper</li>
+            <li>Från enstaka volymer till serieproduktion</li>
+          </ul>
+        </div>
+
+        <div class="start-project-form-card">
+          <form class="project-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+              <label for="name">Namn</label>
+              <input type="text" id="name" placeholder="Ditt namn" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-post</label>
+              <input type="email" id="email" placeholder="din.epost@foretag.se" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Meddelande</label>
+              <textarea id="message" rows="4" placeholder="Beskriv ditt projekt..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Skicka</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CTA Box -->
+  <section id="kontakt" class="section bg-gray">
+    <div class="container text-center">
+      <div class="cta-logo-wrapper">
+        <img src="images/logo.svg" alt="HSSL Design & Solutions" class="site-logo cta-logo" />
+      </div>
+      <p class="cta-desc">Precision i varje detalj och snabb leverans så att du kan fokusera på ditt.</p>
+      <a href="#offert" class="btn btn-primary cta-btn">Få din offert idag</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>TJÄNSTER</h4>
+          <ul>
+            <li><a href="1.1-kompetens-teknisk-ritning-3D-modellering.html">CAD & 3D-modellering</a></li>
+            <li><a href="1.2-kompetens-framtagning-av-forvaringslosningar.html">Sourcing av förvaring</a></li>
+            <li><a href="1.3-kompetens-specialverktygs-framtagning.html">Anpassade specialverktyg</a></li>
+            <li><a href="1.4-kompetens-plast-och-metallbearbetning.html">Plast- & metallbearbetning</a></li>
+            <li><a href="1.5-kompetens-skraddarsydda-skuminsatser.html">Skräddarsydda skuminsatser</a></li>
+            <li><a href="1.6-kompetens-3d-utskrifter-prototyper.html">3D-utskrifter & prototyper</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>TILLÄMPNINGSOMRÅDEN</h4>
+          <ul>
+            <li><a href="2.1-applikationer-elnat-transformatorer.html">Elnät & Transformatorer</a></li>
+            <li><a href="#">Mekanisk verkstad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>OM OSS</h4>
+          <ul>
+            <li><a href="3.1-om-oss.html">Om oss</a></li>
+            <li><a href="3.2-hallbarhet.html">Hållbarhet</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 HSSL DESIGN & SOLUTIONS AB. Alla rättigheter förbehållna.</div>
+        <div>Tel: +46 737 12 96 55 | Email: contact@hsslsolutions.se</div>
+      </div>
+    </div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      const nav = document.querySelector('.nav');
-      nav.classList.toggle('active');
-    }
-  </script>
+    document.addEventListener('click', function(event) {
+      document.querySelectorAll('.nav-dropdown.active').forEach(function(dropdown) {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
 
+    // Give the navbar a solid white backdrop while the page is scrolled all
+    // the way to the top, so it stays legible against the hero photo.
+    (function() {
+      var navbar = document.querySelector('.navbar');
+      if (!navbar) return;
+      function updateNavbarBackdrop() {
+        navbar.classList.toggle('at-top', window.scrollY <= 0);
+      }
+      window.addEventListener('scroll', updateNavbarBackdrop, { passive: true });
+      updateNavbarBackdrop();
+    })();
+  </script>
 </body>
 </html>
