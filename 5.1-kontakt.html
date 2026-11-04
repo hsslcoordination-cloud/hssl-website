@@ -227,35 +227,41 @@
         </div>
 
         <div class="quote-form-card">
-          <form class="project-form" onsubmit="event.preventDefault();">
+          <form class="project-form" action="https://formsubmit.co/contact@hsslsolutions.se" method="POST">
+            <input type="hidden" name="_subject" value="Nytt meddelande från kontaktformuläret" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://www.hsslsolutions.se/5.1-kontakt.html" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            
             <div class="form-grid-2">
               <div class="form-group">
                 <label for="cFirst">Förnamn</label>
-                <input type="text" id="cFirst" placeholder="Förnamn" required />
+                <input type="text" id="cFirst" name="cFirst" placeholder="Förnamn" required />
               </div>
               <div class="form-group">
                 <label for="cLast">Efternamn</label>
-                <input type="text" id="cLast" placeholder="Efternamn" required />
+                <input type="text" id="cLast" name="cLast" placeholder="Efternamn" required />
               </div>
               <div class="form-group">
                 <label for="cCompany">Företag</label>
-                <input type="text" id="cCompany" placeholder="Företagsnamn" />
+                <input type="text" id="cCompany" name="cCompany" placeholder="Företagsnamn" />
               </div>
               <div class="form-group">
                 <label for="cEmail">E-post</label>
-                <input type="email" id="cEmail" placeholder="din.epost@foretag.se" required />
+                <input type="email" id="cEmail" name="cEmail" placeholder="din.epost@foretag.se" required />
               </div>
               <div class="form-group">
                 <label for="cPhone">Telefon</label>
-                <input type="tel" id="cPhone" placeholder="07X-XXX XX XX" />
+                <input type="tel" id="cPhone" name="cPhone" placeholder="07X-XXX XX XX" />
               </div>
             </div>
             <div class="form-group">
               <label for="cMessage">Meddelande</label>
-              <textarea id="cMessage" rows="5" placeholder="Hur kan vi hjälpa dig?" required></textarea>
+              <textarea id="cMessage" name="cMessage" rows="5" placeholder="Hur kan vi hjälpa dig?" required></textarea>
             </div>
             <label class="checkbox-row">
-              <input type="checkbox" required />
+              <input name="privacy_accepted" type="checkbox" required />
               <span>Jag godkänner <a href="#">integritetspolicyn</a>.</span>
             </label>
             <button type="submit" class="btn btn-primary btn-submit-quote">Skicka meddelande</button>

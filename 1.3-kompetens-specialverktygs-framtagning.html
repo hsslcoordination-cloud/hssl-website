@@ -371,18 +371,24 @@
           </div>
 
           <div class="start-project-form-card">
-            <form class="project-form" onsubmit="event.preventDefault();">
+            <form class="project-form" action="https://formsubmit.co/contact@hsslsolutions.se" method="POST">
+            <input type="hidden" name="_subject" value="Ny förfrågan från hsslsolutions.se" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://www.hsslsolutions.se/1.3-kompetens-specialverktygs-framtagning.html" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            
               <div class="form-group">
                 <label for="name">Namn</label>
-                <input type="text" id="name" placeholder="Ditt namn" required />
+                <input type="text" id="name" name="name" placeholder="Ditt namn" required />
               </div>
               <div class="form-group">
                 <label for="email">E-post</label>
-                <input type="email" id="email" placeholder="din.epost@foretag.se" required />
+                <input type="email" id="email" name="email" placeholder="din.epost@foretag.se" required />
               </div>
               <div class="form-group">
                 <label for="message">Meddelande</label>
-                <textarea id="message" rows="4" placeholder="Beskriv ditt projekt..."></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Beskriv ditt projekt..."></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-submit">Skicka</button>
             </form>

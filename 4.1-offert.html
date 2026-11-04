@@ -212,7 +212,13 @@
         </div>
 
         <div class="quote-form-card">
-          <form class="project-form" onsubmit="event.preventDefault();">
+          <form class="project-form" action="https://formsubmit.co/contact@hsslsolutions.se" method="POST">
+            <input type="hidden" name="_subject" value="Ny offertförfrågan från hsslsolutions.se" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://www.hsslsolutions.se/4.1-offert.html" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            
 
             <div class="form-section">
               <h3>Projektinformation</h3>
@@ -221,27 +227,27 @@
               <div class="form-grid-2">
                 <div class="form-group">
                   <label for="projectName">Projektnamn *</label>
-                  <input type="text" id="projectName" placeholder="T.ex. Verktygsväska Fältservice" required />
+                  <input type="text" id="projectName" name="projectName" placeholder="T.ex. Verktygsväska Fältservice" required />
                 </div>
                 <div class="form-group">
                   <label for="partName">Del-/Produktnamn *</label>
-                  <input type="text" id="partName" placeholder="T.ex. Skuminsats till borrmaskin" required />
+                  <input type="text" id="partName" name="partName" placeholder="T.ex. Skuminsats till borrmaskin" required />
                 </div>
                 <div class="form-group">
                   <label for="protoQty">Antal prototyper</label>
-                  <input type="number" id="protoQty" min="0" placeholder="0" />
+                  <input type="number" id="protoQty" name="protoQty" min="0" placeholder="0" />
                 </div>
                 <div class="form-group">
                   <label for="annualVolume">Årsvolym *</label>
-                  <input type="number" id="annualVolume" min="0" placeholder="T.ex. 50" required />
+                  <input type="number" id="annualVolume" name="annualVolume" min="0" placeholder="T.ex. 50" required />
                 </div>
                 <div class="form-group">
                   <label for="orderQty">Orderkvantitet</label>
-                  <input type="number" id="orderQty" min="0" placeholder="T.ex. 10" />
+                  <input type="number" id="orderQty" name="orderQty" min="0" placeholder="T.ex. 10" />
                 </div>
                 <div class="form-group">
                   <label for="protoTimeline">Önskad leveranstid, prototyp</label>
-                  <select id="protoTimeline">
+                  <select id="protoTimeline" name="protoTimeline">
                     <option value="">Välj tidsram</option>
                     <option value="1-2v">1–2 veckor</option>
                     <option value="3-4v">3–4 veckor</option>
@@ -250,7 +256,7 @@
                 </div>
                 <div class="form-group">
                   <label for="prodTimeline">Önskad leveranstid, produktion *</label>
-                  <select id="prodTimeline" required>
+                  <select id="prodTimeline" name="prodTimeline" required>
                     <option value="">Välj tidsram</option>
                     <option value="1-4v">1–4 veckor</option>
                     <option value="1-2m">1–2 månader</option>
@@ -262,7 +268,7 @@
 
               <div class="form-group">
                 <label for="specialReq">Speciella krav</label>
-                <textarea id="specialReq" rows="4" placeholder="Mått, material, IP-klassning, färg eller andra önskemål..."></textarea>
+                <textarea id="specialReq" name="specialReq" rows="4" placeholder="Mått, material, IP-klassning, färg eller andra önskemål..."></textarea>
               </div>
             </div>
 
@@ -273,27 +279,27 @@
               <div class="form-grid-2">
                 <div class="form-group">
                   <label for="firstName">Förnamn *</label>
-                  <input type="text" id="firstName" placeholder="Förnamn" required />
+                  <input type="text" id="firstName" name="firstName" placeholder="Förnamn" required />
                 </div>
                 <div class="form-group">
                   <label for="lastName">Efternamn *</label>
-                  <input type="text" id="lastName" placeholder="Efternamn" required />
+                  <input type="text" id="lastName" name="lastName" placeholder="Efternamn" required />
                 </div>
                 <div class="form-group">
                   <label for="quoteEmail">E-post *</label>
-                  <input type="email" id="quoteEmail" placeholder="din.epost@foretag.se" required />
+                  <input type="email" id="quoteEmail" name="quoteEmail" placeholder="din.epost@foretag.se" required />
                 </div>
                 <div class="form-group">
                   <label for="quotePhone">Telefon *</label>
-                  <input type="tel" id="quotePhone" placeholder="07X-XXX XX XX" required />
+                  <input type="tel" id="quotePhone" name="quotePhone" placeholder="07X-XXX XX XX" required />
                 </div>
                 <div class="form-group">
                   <label for="company">Företag *</label>
-                  <input type="text" id="company" placeholder="Företagsnamn" required />
+                  <input type="text" id="company" name="company" placeholder="Företagsnamn" required />
                 </div>
                 <div class="form-group">
                   <label for="jobTitle">Titel</label>
-                  <input type="text" id="jobTitle" placeholder="T.ex. Inköpare" />
+                  <input type="text" id="jobTitle" name="jobTitle" placeholder="T.ex. Inköpare" />
                 </div>
               </div>
             </div>
